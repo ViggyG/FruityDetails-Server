@@ -1,0 +1,28 @@
+{
+  "name": "fruity-details",
+  "version": "1.0.0",
+  "description": "have you ever wondered which fruit is best?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently -k \"tsc --watch\" \"npm:server:* \"",
+    "server:fruit": "nodemon ./service/fruit.js",
+    "server:graphql": "nodemon index.js"
+  },
+  "author": "Gaelin V.",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/federation": "^0.36.1",
+    "@apollo/gateway": "^2.0.1",
+    "@types/express": "^4.17.13",
+    "apollo-server": "^3.6.7",
+    "apollo-server-express": "^3.6.7",
+    "axios": "^0.26.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0",
+    "nodemon": "^2.0.15"
+  }
+}
